@@ -8,27 +8,30 @@ import com.noorteck.qa.utils.CommonUI;
 
 public class HomePage extends CommonUI{
 	
-	@FindBy(xpath = "//span[text()='Home']")
+	@FindBy(xpath ="/html/body/app-root/mat-sidenav-container/mat-sidenav-content/mat-toolbar/div[3]/ul/li[1]/a/span")
 	WebElement transferButtonField;
 
-	@FindBy(xpath = "//span[text()='Loans']")
+	@FindBy(xpath ="/html/body/app-root/mat-sidenav-container/mat-sidenav-content/mat-toolbar/div[3]/ul/li[4]/a/span")
 	WebElement loanButtonField;
 	
-	@FindBy(xpath = "//span[text()='LogOut']")
+	@FindBy(xpath ="/html/body/app-root/mat-sidenav-container/mat-sidenav-content/mat-toolbar/div[3]/ul/li[5]/a/span/html/body/app-root/mat-sidenav-container/mat-sidenav-content/mat-toolbar/div[3]/ul/li[5]/a/span")
 	WebElement logOutButtonField;
 	
-	public HomePage() {
+	public   HomePage() {
 		PageFactory.initElements(driver, this);
 	}
-	public void clickTransfer() {
+	public  void clickTransfer() {
 		clickTransfer();
 	}
-	public void clickLoan () {
+	public  void clickLoan () {
 		clickLoan();
 	}
-	public void clickLogOut () {
+	public  void clickLogOut () {
 		clickLogOut();
 		
+		
+		
+		//// i have to push this to remote repository
 
 
 

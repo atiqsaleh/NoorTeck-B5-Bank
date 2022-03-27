@@ -45,49 +45,49 @@ public class LoansPage extends CommonUI {
 	@FindBy(xpath = "//*[@id=\"cdk-step-content-4-2\"]/div/button[3]/span")
 	WebElement clickResetButton;
 
-	public LoansPage() {
+	public  LoansPage() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void enterName(String name) {
+	public  void enterName(String name) {
 		enter(enterNameField, name);
 	}
 
-	public void enterEmail(String email) {
+	public  void enterEmail(String email) {
 		enter(enterEmailField, email);
 	}
 
-	public void enterRepayLoan(String repay) {
+	public  void enterRepayLoan(String repay) {
 		enter(enterLoanTypeField, repay);
 	}
 
-	public void clickNextButton() {
+	public  void clickNextButton() {
 		click(clickNextButton);
 	}
 
-	public void enterAccountNumber(String accountNumber) {
+	public  void enterAccountNumber(String accountNumber) {
 		enterAccountNumber(accountNumber);
 	}
 
-	public void enterSocialNumber(String socialNumber) {
+	public  void enterSocialNumber(String socialNumber) {
 		enterSocialNumber(socialNumber);
 	}
 	
-	public void clickBacktButton() {
+	public  void clickBacktButton() {
 		click(clickBackButton);
 	}
 	
-	public void clickNexttButton1() {
+	public  void clickNexttButton1() {
 		click(clickNextButton1);
 	}
 		
-	public void clickConfirmButton() {
+	public  void clickConfirmButton() {
 		click(clickConfirmButton);
 	}
-	public void clickBackSeconTime() {
+	public  void clickBackSeconTime() {
 		click(clickBackSecondTime);
 	}
-		public void clickResetButton() {
+		public  void clickResetButton() {
 			click(clickResetButton);
 			
 		

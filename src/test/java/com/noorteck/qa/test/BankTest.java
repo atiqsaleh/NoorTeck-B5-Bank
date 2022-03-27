@@ -7,23 +7,31 @@ public class BankTest extends ObjInitialize {
 
 	public static void main(String[] args) {
 		String url = "https://usdemo.vee24.com/#/transactions";
-	CommonUI commonUIObj = new CommonUI();
 	ObjInitialize obj = new ObjInitialize();
-	BankTest testObj = new BankTest();
-	commonUIObj.openBrowser("chrome");
-	commonUIObj.navigate(url);
-	testObj.homePageTest();
-	testObj.loansPageTest();
-	testObj.TransferPageTest();
-	
-	
+	CommonUI.openBrowser("chrome");
+	CommonUI.navigate(url);
+	initializeClassObj();
+	//homePageTest();
+	TransferPageTest();
+	CommonUI.quitBrowser();
 	}
-public void homePageTest() {
+public static void homePageTest() {
 	homeObj.clickTransfer();
 	homeObj.clickLoan();
 	homeObj.clickLogOut();
 }
-public void loansPageTest() {
+public static void TransferPageTest() {
+	transferObj.clickTransfer();
+	transferObj.clickPersonalInfo();
+	transferObj.clickPersonalAndClick();
+	transferObj.clickDestinationInfo();
+	transferObj.clickDestinationAndClick();
+	transferObj.enterAmount("5000");
+	transferObj.enterSocialNumber("392889423");
+	transferObj.enterATMNumber("2478");
+	transferObj.clickTransferButton();
+}
+public static void loansPageTest() {
 	loanObj.enterName("Samer");
 	loanObj.enterEmail("samersaleh@gmail.com");
 	loanObj.enterRepayLoan("Deposit");
@@ -34,18 +42,12 @@ public void loansPageTest() {
 	loanObj.clickBackSeconTime();
 	loanObj.clickResetButton();
 }
-	public void TransferPageTest() {
-		transferObj.enterAccountNumber("015234675");
-		transferObj.enterDistanition("VA");
-		transferObj.enterAmount("1200000");
-		transferObj.enterSocialNumber("091-75-3211");
-		transferObj.enterATM("22408");
-		transferObj.clickTransferButton();
+	
 	
 
 	
 }
-}
+
 /**
 		--------------------------------------	INSTRUCTIONS --------------------------------------------
 			
